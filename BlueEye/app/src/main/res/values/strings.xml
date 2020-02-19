@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BlueEye</string>
+    <string name="btn_start_service">START</string>
+    <string name="btn_end_service">END</string>
+    <string name="time_interval">1</string>
+    <string name="ACTION_START_PROFILER">COMMAND_START</string>>
+</resources>
