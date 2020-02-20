@@ -10,15 +10,21 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 
 import com.eric.blueeye.R;
+import com.eric.blueeye.function.BlueEyeWorker;
 
 public class BlueEyeService extends Service {
+    private Handler handler = new ServiceHandle(this, Looper.getMainLooper());
     public BlueEyeService() {
     }
     @Override
     public void onCreate(){
+        Thread worker_thread = new BlueEyeWorker((Context)this,handler);
+        worker_thread.start();
         CreateNotification();
     }
 
