@@ -16,9 +16,6 @@
             android:name=".service.BlueEyeService"
             android:enabled="true"
             android:exported="true"></service>
-        <service
-            android:name=".service.ProfilerService"
-            android:exported="false" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
